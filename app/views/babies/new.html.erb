@@ -1,0 +1,15 @@
+<%= form_with model: @baby do |f| %>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :potty_trained %>
+  <%= f.number_field :potty_trained %>
+  <%= f.label  :avg_napping_hours %>
+  <%= f.text_field  :avg_napping_hours %>
+  <%= f.label :screamometer %>
+  <%= f.text_field :screamomete %>
+  <%= f.label :medical_needs %>
+  <%= f.number_field :medical_needs %>
+  <%= f.submit %>
+<% end %>

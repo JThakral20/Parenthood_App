@@ -1,0 +1,11 @@
+<h1>heelooooooooo </h1>
+<ul>
+  <% @babies.each do |baby| %>
+    <li><%= baby.name %></li>
+    <li><%= baby.age %></li>
+    <li><%= baby.potty_trained %></li>
+    <li><%= baby.avg_napping_hours %></li>
+    <li><%= baby.screamometer %></li>
+    <li><%= baby.medical_needs %></li>
+  <% end %>
+</ul>

@@ -13,6 +13,14 @@ class BabiesController < ApplicationController
     redirect_to babies_path(@baby)
   end
 
+  def show
+    @baby = Baby.find(params[:id])
+  end
+
+  def edit
+    @baby = Baby.find(params[:id])
+  end
+
   private
 
   def baby_params

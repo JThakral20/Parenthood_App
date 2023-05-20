@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post "babies", to: "babies#create"
   get "babies/:id", to: "babies#show"
   get "babies/:id/edit", to: "babies#edit"
+  patch "babies/:id", to: "babies#update"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"

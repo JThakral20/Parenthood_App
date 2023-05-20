@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.save
-    redirect_to bookings_path(@booking)
+    redirect_to baby_bookings_path(@booking)
   end
 
   private

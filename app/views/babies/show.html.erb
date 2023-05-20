@@ -4,3 +4,5 @@
 <p><%= @baby.avg_napping_hours %></p>
 <p><%= @baby.screamometer %></p>
 <p><%= @baby.medical_needs %></p>
+
+<%= link_to "Book", new_baby_booking_path(@baby) %>

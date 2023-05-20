@@ -8,7 +8,9 @@ class BookingsController < ApplicationController
   end
 
   def create
+    raise
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.save
     redirect_to baby_bookings_path(@booking)
   end
@@ -16,6 +18,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:baby, :start_date, :end_date)
   end
 end

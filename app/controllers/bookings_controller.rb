@@ -4,15 +4,15 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @baby = Baby.find(params[:baby_id])
     @booking = Booking.new
   end
 
   def create
-    raise
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.save
-    redirect_to baby_bookings_path(@booking)
+    redirect_to babies_path
   end
 
   private

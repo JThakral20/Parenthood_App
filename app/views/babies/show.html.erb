@@ -5,6 +5,6 @@
 <p>Loud: <%= @baby.screamometer %></p>
 <p>Sick:<%= @baby.medical_needs %></p>
 
-<%= render '/bookings/new_booking' %>
+<%= render 'bookings/new_booking', booking: @booking, baby: @baby %>
 
-<%= link_to "Book", new_baby_booking_path(@baby) %>
+<%#= link_to "Book", new_baby_booking_path(@baby) %>

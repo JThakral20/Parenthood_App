@@ -1,11 +1,11 @@
 <h1>heelooooooooo </h1>
 <ul>
   <% @babies.each do |baby| %>
-    <li><%= baby.name %></li>
-    <li><%= baby.age %></li>
-    <li><%= baby.potty_trained %></li>
-    <li><%= baby.avg_napping_hours %></li>
-    <li><%= baby.screamometer %></li>
-    <li><%= baby.medical_needs %></li>
+    <%= link_to baby.name, baby_path(baby.id) %>
+    <li><p>Age</p><%= baby.age %></li>
+    <li><p>potty_trained</p><%= baby.potty_trained %></li>
+    <li><p>avg_napping_hours</p><%= baby.avg_napping_hours %></li>
+    <li><p>screamometer</p><%= baby.screamometer %></li>
+    <li><p>medical_needs</p><%= baby.medical_needs %></li>
   <% end %>
 </ul>

@@ -15,6 +15,8 @@ class BabiesController < ApplicationController
 
   def show
     @baby = Baby.find(params[:id])
+    @booking = Booking.new
+
   end
 
   def edit

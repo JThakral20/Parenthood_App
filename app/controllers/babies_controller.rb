@@ -1,6 +1,12 @@
 class BabiesController < ApplicationController
   def index
     @babies = Baby.all
+    @markers = @babies.geocoded.map do |baby|
+      {
+        lat: baby.latitude,
+        lng: baby.longitude
+      }
+    end
   end
 
   def new

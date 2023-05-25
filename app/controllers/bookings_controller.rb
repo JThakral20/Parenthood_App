@@ -11,13 +11,16 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.save
-    redirect_to babies_path
+    @baby = Baby.find(params[:baby_id])
+    @booking.baby = @baby
+    @booking.save!
+    # redirect_to babies_path
+    redirect_to bookings_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:baby, :start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

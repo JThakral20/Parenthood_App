@@ -1,11 +1,19 @@
 <h1>Baby Listings </h1>
-<ul>
-  <% @babies.each do |baby| %>
-    <%= link_to baby.name, baby_path(baby.id) %>
-    <li><p>Age</p><%= baby.age %></li>
-    <li><p>potty_trained</p><%= baby.potty_trained %></li>
-    <li><p>avg_napping_hours</p><%= baby.avg_napping_hours %></li>
-    <li><p>screamometer</p><%= baby.screamometer %></li>
-    <li><p>medical_needs</p><%= baby.medical_needs %></li>
-  <% end %>
-</ul>
+<div class="card">
+  <div class="card-body">
+    <ul class="list-group">
+      <% @babies.each do |baby| %>
+        <li class="list-group-item">
+          <%= link_to baby.name, baby_path(baby.id) %>
+          <ul class="list-unstyled">
+            <li><p>Age:</p><%= baby.age %></li>
+            <li><p>Potty Trained:</p><%= baby.potty_trained %></li>
+            <li><p>Average Napping Hours:</p><%= baby.avg_napping_hours %></li>
+            <li><p>Screamometer:</p><%= baby.screamometer %></li>
+            <li><p>Medical Needs:</p><%= baby.medical_needs %></li>
+          </ul>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

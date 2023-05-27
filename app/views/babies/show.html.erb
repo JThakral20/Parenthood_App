@@ -4,6 +4,7 @@
 <p>Sleep:<%= @baby.avg_napping_hours %></p>
 <p>Loud: <%= @baby.screamometer %></p>
 <p>Sick:<%= @baby.medical_needs %></p>
+<%= cl_image_tag @baby.photo.key, height: 300, width: 400, crop: :fill if @baby.photo.attached?%>
 
 <%= render 'bookings/new_booking', booking: @booking, baby: @baby %>
 

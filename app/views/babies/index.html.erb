@@ -11,6 +11,7 @@
             <li><p>Average Napping Hours:</p><%= baby.avg_napping_hours %></li>
             <li><p>Screamometer:</p><%= baby.screamometer %></li>
             <li><p>Medical Needs:</p><%= baby.medical_needs %></li>
+            <%= cl_image_tag baby.photo.key, height: 300, width: 400, crop: :fill if baby.photo.attached?%>
           </ul>
         </li>
       <% end %>

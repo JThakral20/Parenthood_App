@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
+Baby.destroy_all
 Baby.create(name: "Jasmine", age: 0, potty_trained: true, avg_napping_hours: 6, screamometer: 1, medical_needs: 1)
 Baby.create(name: "Bill", age: 0, potty_trained: false, avg_napping_hours: 5, screamometer: 2, medical_needs: 2)
 Baby.create(name: "Lisa", age: 0, potty_trained: true, avg_napping_hours: 2, screamometer: 3, medical_needs: 3)

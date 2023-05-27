@@ -1,9 +1,9 @@
 <h2>Name: <%= @baby.name %></h2>
 <p>Age:<%= @baby.age %></p>
-<p>Poo:<%= @baby.potty_trained %></p>
-<p>Sleep:<%= @baby.avg_napping_hours %></p>
-<p>Loud: <%= @baby.screamometer %></p>
-<p>Sick:<%= @baby.medical_needs %></p>
+<p>Potty Trained:<%= @baby.potty_trained %></p>
+<p>Average Napping Hours:<%= @baby.avg_napping_hours %></p>
+<p>Screamometer: <%= @baby.screamometer %></p>
+<p>Medical Needs:<%= @baby.medical_needs %></p>
 
 <%= render 'bookings/new_booking', booking: @booking, baby: @baby %>
 

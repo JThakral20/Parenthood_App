@@ -6,11 +6,15 @@
         <li class="list-group-item">
           <%= link_to baby.name, baby_path(baby.id) %>
           <ul class="list-unstyled">
-            <li><p>Age:</p><%= baby.age %></li>
-            <li><p>Potty Trained:</p><%= baby.potty_trained %></li>
-            <li><p>Average Napping Hours:</p><%= baby.avg_napping_hours %></li>
-            <li><p>Screamometer:</p><%= baby.screamometer %></li>
-            <li><p>Medical Needs:</p><%= baby.medical_needs %></li>
+            <li><p>Age: <%= baby.age %></li></p>
+            <li><p>Potty Trained: <% if baby.potty_trained %>
+      <span>Baby is potty trained</span>
+    <% else %>
+      <span>Baby is not potty trained</span>
+    <% end %></li></p>
+            <li><p>Average Napping Hours: <%= baby.avg_napping_hours %></li></p>
+            <li><p>Screamometer: <%= baby.screamometer %></li></p>
+            <li><p>Medical Needs: <%= baby.medical_needs %></li></p>
           </ul>
         </li>
       <% end %>

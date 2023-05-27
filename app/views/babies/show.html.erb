@@ -1,10 +1,17 @@
-<h2>Name: <%= @baby.name %></h2>
-<p>Age:<%= @baby.age %></p>
-<p>Poo:<%= @baby.potty_trained %></p>
-<p>Sleep:<%= @baby.avg_napping_hours %></p>
-<p>Loud: <%= @baby.screamometer %></p>
-<p>Sick:<%= @baby.medical_needs %></p>
-<%= cl_image_tag @baby.photo.key, height: 300, width: 400, crop: :fill if @baby.photo.attached?%>
+
+<div class="card">
+  <div class="card-body">
+    <ul class="list-group">
+    <h2>Name: <%= @baby.name %></h2>
+    <p>Age:<%= @baby.age %></p>
+    <p>Potty Trained:<%= @baby.potty_trained %></p>
+    <p>Average Napping Hours:<%= @baby.avg_napping_hours %></p>
+    <p>Screamometer: <%= @baby.screamometer %></p>
+    <p>Medical Needs:<%= @baby.medical_needs %></p>
+      <%= cl_image_tag @baby.photo.key, height: 300, width: 400, crop: :fill if @baby.photo.attached?%>
+  </div>
+</div>
+
 
 <%= render 'bookings/new_booking', booking: @booking, baby: @baby %>
 

@@ -15,14 +15,13 @@
             <li><p>Average Napping Hours: <%= baby.avg_napping_hours %></li></p>
             <li><p>Screamometer: <%= baby.screamometer %></li></p>
             <li><p>Medical Needs: <%= baby.medical_needs %></li></p>
+<%= cl_image_tag baby.photo.key, height: 300, width: 400, crop: :fill if baby.photo.attached?%>
           </ul>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
-
-
 
 
 
